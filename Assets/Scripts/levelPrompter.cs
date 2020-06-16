@@ -40,7 +40,6 @@ public class levelPrompter : MonoBehaviour
 
     public void proceedWithLevel()
     {
-        Debug.Log("GG This is here doing");
         SceneManager.LoadScene(activePromptLevel);
         isPrompterOn = false;
     }

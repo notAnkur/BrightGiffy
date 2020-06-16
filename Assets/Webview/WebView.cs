@@ -81,7 +81,7 @@ public class WebView : MonoBehaviour
 #endif
         //webViewObject.SetAlertDialogEnabled(false);
         //webViewObject.SetURLPattern("", "^https://www.google.com");
-        webViewObject.SetMargins(170, 50, 170, 170);
+        webViewObject.SetMargins(140, 50, 170, 170);
         webViewObject.SetVisibility(true);
 
 #if !UNITY_WEBPLAYER && !UNITY_WEBGL

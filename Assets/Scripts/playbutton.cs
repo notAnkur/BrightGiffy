@@ -3,30 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-[RequireComponent(typeof(Button))]
 public class playbutton : MonoBehaviour
 {
-    public Button yourButton;
-    public AudioClip sound;
-    private AudioSource bclicksound { get { return GetComponent<AudioSource>(); } }
+
+    public AudioSource sound;
 
     void Start()
     {
-        Button btn = yourButton.GetComponent<Button>();
-        btn.onClick.AddListener(jaclick);
-        gameObject.AddComponent<AudioSource>();
-        bclicksound.clip = sound;
-        bclicksound.playOnAwake = false;
+
     }
 
-    public void jaclick()
+    public void LoadMainMenu()
     {
-        bclicksound.PlayOneShot(sound);
-        StartCoroutine(DelaySceneLoad());
-    }
-    IEnumerator DelaySceneLoad()
-    {
-        yield return new WaitForSeconds(0.01f);
+        sound.Play();
         SceneManager.LoadScene("Levels");
+    }
+    public void LoadLoginMenu(string a)
+    {
+        sound.Play();
+        SceneManager.LoadScene(a);
     }
 }

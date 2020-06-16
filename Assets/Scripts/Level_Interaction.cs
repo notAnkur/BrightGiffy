@@ -8,16 +8,15 @@ public class Level_Interaction : MonoBehaviour
     //Game objects
     public GameObject welcomeText;
     public GameObject playgroup;
+    public GameObject progrssPannel;
 
     //sound-related
-    public AudioClip sound;
-    private AudioSource bclicksound { get { return GetComponent<AudioSource>(); } }
+    public AudioSource sound;
     void Start()
     {
-        playgroup.AddComponent<AudioSource>();
-        Time.timeScale = 1;
         welcomeText.SetActive(true);
         playgroup.SetActive(false);
+        progrssPannel.SetActive(false);
     }
 
     void Update()
@@ -27,14 +26,25 @@ public class Level_Interaction : MonoBehaviour
 
     public void playgroupButton()
     {
-        bclicksound.PlayOneShot(sound);
+        sound.Play();
         welcomeText.SetActive(false);
         playgroup.SetActive(true);
     }
     public void mainMenuButton()
     {
-        bclicksound.PlayOneShot(sound);
+        sound.Play();
         welcomeText.SetActive(true);
         playgroup.SetActive(false);
+    }
+
+    public void progressOpen()
+    {
+        sound.Play();
+        progrssPannel.SetActive(true);
+    }
+    public void closeProgress()
+    {
+        sound.Play();
+        progrssPannel.SetActive(false);
     }
 }

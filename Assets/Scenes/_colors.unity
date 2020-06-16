@@ -1130,17 +1130,17 @@ MonoBehaviour:
   - {fileID: 1758916837}
   - {fileID: 26749563}
   linksToGame:
-  - http://www.brightkidmont.com/test_flash/square1/square2.html
-  - http://www.brightkidmont.com/test_flash/square2/square6.html
-  - http://www.brightkidmont.com/test_flash/circle1/circle1.html
-  - http://www.brightkidmont.com/test_flash/circle3/circle7.html
-  - http://www.brightkidmont.com/test_flash/circle3/circle7.html
-  - http://www.brightkidmont.com/test_flash/circle6/circle9.html
-  - http://www.brightkidmont.com/test_flash/triangle1/Triangle1.html
-  - http://www.brightkidmont.com/test_flash/triangle2/Triangle4.html
-  - http://www.brightkidmont.com/test_flash/triangle3/Triangle5.html
-  - http://www.brightkidmont.com/test_flash/triangle4/Triangle7.html
-  - http://www.brightkidmont.com/test_flash/rect1/rect1.html
+  - https://www.brightkidmont.com/smartclass/orange1.html
+  - https://www.brightkidmont.com/smartclass/red8.html
+  - https://www.brightkidmont.com/smartclass/yellow1.html
+  - https://www.brightkidmont.com/smartclass/yellow2.html
+  - https://www.brightkidmont.com/smartclass/yellow3.html
+  - https://www.brightkidmont.com/smartclass/green9.html
+  - https://www.brightkidmont.com/smartclass/orange2.html
+  - https://www.brightkidmont.com/smartclass/green8.html
+  - https://www.brightkidmont.com/smartclass/orange6.html
+  - https://www.brightkidmont.com/smartclass/red6.html
+  - https://www.brightkidmont.com/smartclass/blue2.html
   - http://www.brightkidmont.com/test_flash/rect2/rect4.html
   - http://www.brightkidmont.com/test_flash/rect3/rect5.html
   - http://www.brightkidmont.com/test_flash/rect4/rect8.html
