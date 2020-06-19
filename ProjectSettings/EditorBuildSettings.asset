@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/loginMenu.unity
     guid: 181cf69c3c2e3714dae4c8c08a42a482
   - enabled: 1
@@ -21,10 +21,10 @@ EditorBuildSettings:
     path: Assets/Scenes/_colors.unity
     guid: fb4cfaa08ad38d2438650b9b0f8f955e
   - enabled: 1
-    path: Assets/Scenes/_farm animals.unity
+    path: Assets/Scenes/_fruits.unity
     guid: cdd8a2c5629c50e4f877e93dcfe43257
   - enabled: 1
-    path: Assets/Scenes/_fruits.unity
+    path: Assets/Scenes/_farm animals.unity
     guid: 48692ffc7c0a0e849b040cd78a75be49
   - enabled: 1
     path: Assets/Scenes/_jungle animals.unity

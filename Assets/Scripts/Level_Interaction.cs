@@ -7,7 +7,10 @@ public class Level_Interaction : MonoBehaviour
 {
     //Game objects
     public GameObject welcomeText;
-    public GameObject playgroup;
+    public GameObject playgroupBoard;
+    public GameObject nurseryBoard;
+    public GameObject lkgBoard;
+    public GameObject ukgBoard;
     public GameObject progrssPannel;
 
     //sound-related
@@ -15,7 +18,11 @@ public class Level_Interaction : MonoBehaviour
     void Start()
     {
         welcomeText.SetActive(true);
-        playgroup.SetActive(false);
+        playgroupBoard.SetActive(false);
+        playgroupBoard.SetActive(false);
+        nurseryBoard.SetActive(false);
+        lkgBoard.SetActive(false);
+        ukgBoard.SetActive(false);
         progrssPannel.SetActive(false);
     }
 
@@ -23,18 +30,53 @@ public class Level_Interaction : MonoBehaviour
     {
         
     }
+    public void mainMenuButton()
+    {
+        sound.Play();
+        welcomeText.SetActive(true);
+        playgroupBoard.SetActive(false);
+        nurseryBoard.SetActive(false);
+        lkgBoard.SetActive(false);
+        ukgBoard.SetActive(false);
+    }
 
     public void playgroupButton()
     {
         sound.Play();
         welcomeText.SetActive(false);
-        playgroup.SetActive(true);
+        playgroupBoard.SetActive(true);
+        nurseryBoard.SetActive(false);
+        lkgBoard.SetActive(false);
+        ukgBoard.SetActive(false);
     }
-    public void mainMenuButton()
+
+    public void nurseryButton()
     {
         sound.Play();
-        welcomeText.SetActive(true);
-        playgroup.SetActive(false);
+        welcomeText.SetActive(false);
+        
+        playgroupBoard.SetActive(false);
+        nurseryBoard.SetActive(true);
+        lkgBoard.SetActive(false);
+        ukgBoard.SetActive(false);
+    }
+    public void lkgButton()
+    {
+        sound.Play();
+        welcomeText.SetActive(false);
+        playgroupBoard.SetActive(false);
+        nurseryBoard.SetActive(false);
+        lkgBoard.SetActive(true);
+        ukgBoard.SetActive(false);
+    }
+    public void ukgButton()
+    {
+        sound.Play();
+        welcomeText.SetActive(false);
+        playgroupBoard.SetActive(false);
+        nurseryBoard.SetActive(false);
+        lkgBoard.SetActive(false);
+        ukgBoard.SetActive(true);
     }
 
     public void progressOpen()
