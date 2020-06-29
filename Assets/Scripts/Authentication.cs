@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class Authentication
 {
-    private static string requestUrl = "http://localhost:8006/auth/login";
+    private static string requestUrl = "http://ec2-54-89-182-73.compute-1.amazonaws.com:8006/auth/login";
 
     /*
     *   callback params -> (bool isNetworkError, string network_response)
