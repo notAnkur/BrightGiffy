@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Level_Interaction : MonoBehaviour
 {
@@ -13,17 +14,48 @@ public class Level_Interaction : MonoBehaviour
     public GameObject ukgBoard;
     public GameObject progrssPannel;
 
+    //public GameObject[] levelMenu;
+    [Header("Level Menu Items")]
+    public GameObject playgroupMenu;
+    public GameObject nurseryMenu;
+    public GameObject lkgMenu;
+    public GameObject ukgMenu;
+
     //sound-related
     public AudioSource sound;
     void Start()
     {
         welcomeText.SetActive(true);
         playgroupBoard.SetActive(false);
-        playgroupBoard.SetActive(false);
         nurseryBoard.SetActive(false);
         lkgBoard.SetActive(false);
         ukgBoard.SetActive(false);
         progrssPannel.SetActive(false);
+
+        playgroupMenu.SetActive(false);
+        nurseryMenu.SetActive(false);
+        lkgMenu.SetActive(false);
+        ukgMenu.SetActive(false);
+
+        switch(PlayerPrefs.GetString("level").ToLower())
+        {
+            case "playgroup":
+                playgroupMenu.SetActive(true);
+                break;
+            case "nursery":
+                nurseryMenu.SetActive(true);
+                break;
+            case "lkg":
+                lkgMenu.SetActive(true);
+                break;
+            case "ukg":
+                ukgMenu.SetActive(true);
+                return;
+            default:
+                SceneManager.LoadScene("loginMenu");
+                break;
+
+        }
     }
 
     void Update()
