@@ -21,7 +21,7 @@ public class levelPrompter : MonoBehaviour
 
     public void turnOnPrompter(string a)
     {
-        activePromptLevel = "_" + a.ToLower();
+        activePromptLevel = PlayerPrefs.GetString("class").ToLower() + "-" + a.Replace(" ", "").ToLower();
         if (!isPrompterOn)
         {
             promptPanel.SetActive(true);

@@ -16,13 +16,15 @@ public class playbutton : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetString("token", null);
         PersistentLoginLabel.text = "Authenticating...";
-        if(string.IsNullOrEmpty(PlayerPrefs.GetString("token", null)))
+        if (string.IsNullOrEmpty(PlayerPrefs.GetString("token", null)))
         {
             // no token, make user login
             PersistentLogin.SetActive(false);
             LoginContainer.SetActive(true);
-        } else
+        }
+        else
         {
             LoadMainMenu();
         }
@@ -62,6 +64,7 @@ public class playbutton : MonoBehaviour
                     PlayerPrefs.SetString("email", authResponse.userProfile.email);
                     PlayerPrefs.SetString("photoURL", authResponse.userProfile.photoURL);
                     PlayerPrefs.SetString("level", authResponse.userProfile.level);
+                    
 
                     LoadMainMenu();
                 }

@@ -32,12 +32,14 @@ public class Level_Interaction : MonoBehaviour
         ukgBoard.SetActive(false);
         progrssPannel.SetActive(false);
 
-        playgroupMenu.SetActive(false);
+/*        playgroupMenu.SetActive(false);
         nurseryMenu.SetActive(false);
         lkgMenu.SetActive(false);
         ukgMenu.SetActive(false);
 
-        switch(PlayerPrefs.GetString("level").ToLower())
+
+
+        switch (PlayerPrefs.GetString("level").ToLower())
         {
             case "playgroup":
                 playgroupMenu.SetActive(true);
@@ -55,7 +57,7 @@ public class Level_Interaction : MonoBehaviour
                 SceneManager.LoadScene("loginMenu");
                 break;
 
-        }
+        }*/
     }
 
     void Update()
@@ -80,6 +82,7 @@ public class Level_Interaction : MonoBehaviour
         nurseryBoard.SetActive(false);
         lkgBoard.SetActive(false);
         ukgBoard.SetActive(false);
+        PlayerPrefs.SetString("class", "p");
     }
 
     public void nurseryButton()
@@ -91,6 +94,7 @@ public class Level_Interaction : MonoBehaviour
         nurseryBoard.SetActive(true);
         lkgBoard.SetActive(false);
         ukgBoard.SetActive(false);
+        PlayerPrefs.SetString("class", "n");
     }
     public void lkgButton()
     {
@@ -100,6 +104,7 @@ public class Level_Interaction : MonoBehaviour
         nurseryBoard.SetActive(false);
         lkgBoard.SetActive(true);
         ukgBoard.SetActive(false);
+        PlayerPrefs.SetString("class", "l");
     }
     public void ukgButton()
     {
@@ -109,6 +114,7 @@ public class Level_Interaction : MonoBehaviour
         nurseryBoard.SetActive(false);
         lkgBoard.SetActive(false);
         ukgBoard.SetActive(true);
+        PlayerPrefs.SetString("class", "u");
     }
 
     public void progressOpen()

@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class mapScript : MonoBehaviour
 {
-    public string topic;
+    public string className;
+    public string topicName;
+
+
+    //class - n, p, l, u
+    //topic - colors, 
     
     public GameObject webViewGameobject;
     public WebView webviewInstance;
@@ -24,7 +29,7 @@ public class mapScript : MonoBehaviour
         webViewGameobject.SetActive(false);
         for(int i=1; i <= nodesCompleted.Length; i++)
         {
-            if(PlayerPrefs.GetInt("p-"+topic+"-"+i, 0) != 0)
+            if (PlayerPrefs.GetInt(className + "-" + topicName + "-" + i, 0) != 0)
             {
                 nodesCompleted[i-1].SetActive(true);
             }
@@ -59,7 +64,7 @@ public class mapScript : MonoBehaviour
         {
             Destroy(g);
         }
-        PlayerPrefs.SetInt("p-" + topic + "-" + (activeGame + 1), 0);
+        PlayerPrefs.SetInt(className + "-" + topicName + "-" + (activeGame + 1), 0);
         nodesCompleted[activeGame].SetActive(false);
         activeGame = -1;
     }
@@ -76,7 +81,7 @@ public class mapScript : MonoBehaviour
         {
             Destroy(g);
         }
-        PlayerPrefs.SetInt("p-" + topic + "-" + (activeGame + 1), 1);
+        PlayerPrefs.SetInt(className + "-" + topicName + "-" + (activeGame + 1), 1);
         activeGame = -1;
     }
 
